@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Odds of Hitting a 3-Leg NFL Parlay | Clearline Parlay Lab</title>
+<meta name="description" content="What are the real odds of hitting a 3-leg NFL parlay? See the math, the break-even point, and how the payout compares to the true chance of winning.">
+<style>
+:root{--ink:#1b2430;--muted:#556070;--bg:#f6f4ee;--card:#ffffff;--accent:#0b5d3b;--gold:#e0a82e;--line:#dcd8cb}
+*{box-sizing:border-box}
+body{margin:0;font-family:Georgia,"Times New Roman",serif;line-height:1.65;color:var(--ink);background:var(--bg);font-size:18px}
+.notice{background:#1b2430;color:#fff;font:14px/1.5 Arial,Helvetica,sans-serif;padding:10px 16px;text-align:center}
+.site-header{background:var(--accent);color:#fff;padding:14px 16px}
+.site-header .inner{max-width:900px;margin:0 auto}
+.brand{font:700 22px/1.2 Arial,Helvetica,sans-serif;color:#fff;text-decoration:none;display:inline-block;margin-bottom:8px}
+.brand span{color:var(--gold)}
+nav ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px 8px}
+nav a{display:block;font:15px/1.3 Arial,Helvetica,sans-serif;color:#fff;text-decoration:none;padding:8px 12px;border-radius:6px;background:rgba(255,255,255,.12)}
+nav a:hover,nav a[aria-current="page"]{background:#fff;color:var(--accent)}
+main{max-width:760px;margin:0 auto;padding:28px 16px 44px}
+h1,h2,h3{font-family:Arial,Helvetica,sans-serif;line-height:1.25;color:var(--accent)}
+h1{font-size:2rem;margin:.2em 0 .5em}
+h2{font-size:1.4rem;margin:1.8em 0 .5em}
+h3{font-size:1.1rem;margin:1.4em 0 .4em}
+p{margin:0 0 1em}
+a{color:#0a4f9e}
+.lead{font-size:1.15rem;color:var(--muted)}
+.callout{background:var(--card);border-left:5px solid var(--gold);padding:14px 16px;margin:1.4em 0;border-radius:0 8px 8px 0}
+.tablewrap{overflow-x:auto;margin:1em 0}
+table{width:100%;border-collapse:collapse;background:var(--card);font:15px/1.4 Arial,Helvetica,sans-serif}
+th,td{border:1px solid var(--line);padding:9px 10px;text-align:left}
+th{background:#ece8da}
+.site-footer{background:#1b2430;color:#d9dee5;padding:24px 16px;font:14px/1.6 Arial,Helvetica,sans-serif}
+.site-footer .inner{max-width:760px;margin:0 auto}
+.site-footer a{color:#fff}
+.site-footer ul{list-style:none;padding:0;margin:0 0 14px;display:flex;flex-wrap:wrap;gap:6px 16px}
+@media (min-width:640px){h1{font-size:2.4rem}}
+</style>
+</head>
+<body>
+<div class="notice">This is a fictional website created for educational purposes as part of MKTG:4400 at the University of Iowa. It is not a real business.</div>
+<header class="site-header">
+<div class="inner">
+<a class="brand" href="index.html">Clearline <span>Parlay Lab</span></a>
+<nav aria-label="Main">
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="parlay-builder-player-prop-hit-rates.html">Prop Hit Rates</a></li>
+<li><a href="odds-of-hitting-a-3-leg-nfl-parlay.html" aria-current="page">3-Leg Parlay Odds</a></li>
+<li><a href="nfl-parlay-calculator-true-probability.html">True Probability</a></li>
+</ul>
+</nav>
+</div>
+</header>
+<main>
+<h1>The odds of hitting a 3-leg NFL parlay</h1>
+<p class="lead">If every leg is a coin flip, a three-leg parlay wins 1 time in 8. Whether that is a fair deal depends entirely on what the ticket pays.</p>
+
+<h2>The basic math</h2>
+<p>A parlay wins only if every leg wins, so you multiply the probabilities of the individual legs. Take three legs that each have a 50 percent chance. The result is 0.5 x 0.5 x 0.5, which is 12.5 percent, or one win in every eight tickets.</p>
+<p>Most NFL point spreads and totals are priced at -110, which sounds like a coin flip but is not quite one. A -110 price implies a 52.4 percent chance (110 divided by 210), because the sportsbook builds a margin into both sides. We cover that margin on the <a href="nfl-parlay-calculator-true-probability.html">true probability page</a>. For now, the useful fact is that the book needs you to win less than 52.4 percent to make money on that leg, and the fair chance on a typical -110 side is closer to 50 percent.</p>
+
+<h2>What a 3-leg parlay pays</h2>
+<p>Parlay payouts multiply the decimal odds of each leg. A -110 bet has decimal odds of about 1.909. Three of them multiply to roughly 6.96, which means a $100 ticket returns $696 in total, a profit of $596. Sportsbooks quote this as +596.</p>
+<p>That payout implies a break-even chance of 1 divided by 6.96, or 14.4 percent. You need to win 14.4 percent of the time to come out even. A fair three-leg ticket of coin flips wins 12.5 percent of the time. The gap between 14.4 and 12.5 is the price of playing.</p>
+
+<div class="callout">
+<p><strong>Expected value of the typical ticket.</strong> At a true 12.5 percent win chance and a +596 payout, a $100 ticket is expected to lose about $13 on average. That is a 13 percent cost, compared with about 4.5 percent for a single -110 bet. Parlays multiply the sportsbook's margin along with the payout.</p>
+</div>
+
+<h2>How the odds change with the strength of your legs</h2>
+<p>The table below shows the chance of hitting all three legs when each one has the same true probability, along with the expected result of a $100 ticket at +596.</p>
+<div class="tablewrap">
+<table>
+<thead><tr><th>True chance per leg</th><th>Chance all 3 hit</th><th>About 1 in</th><th>Expected result of a $100 ticket</th></tr></thead>
+<tbody>
+<tr><td>40%</td><td>6.4%</td><td>16</td><td>-$55.5</td></tr>
+<tr><td>45%</td><td>9.1%</td><td>11</td><td>-$36.6</td></tr>
+<tr><td>50%</td><td>12.5%</td><td>8</td><td>-$13.0</td></tr>
+<tr><td>52.4%</td><td>14.4%</td><td>7</td><td>$0.0</td></tr>
+<tr><td>55%</td><td>16.6%</td><td>6</td><td>+$15.8</td></tr>
+<tr><td>60%</td><td>21.6%</td><td>5</td><td>+$50.3</td></tr>
+<tr><td>65%</td><td>27.5%</td><td>4</td><td>+$91.1</td></tr>
+</tbody>
+</table>
+</div>
+<p>Look at the 52.4 percent row. A leg has to be a genuine 52.4 percent proposition, not 50, before the ticket breaks even. That is a modest edge on any single bet and a very hard one to find on three bets at once.</p>
+
+<h2>Why adding legs makes it worse</h2>
+<p>Each new leg multiplies your chance of winning by a number below one, so the win rate falls fast. With every leg at 50 percent, one leg wins half the time, two legs win a quarter of the time, three legs win 12.5 percent, four legs win 6.25 percent, and five legs win about 3 percent. The payout grows too, but the sportsbook's margin grows with it. The three-leg ticket is a middle ground, which is part of why it is so common.</p>
+
+<h2>Same-game legs are different</h2>
+<p>If two or three legs come from one game, they are linked. A quarterback going over his passing yards makes his receiver's over more likely and makes the game total over more likely. Books know this and price same-game parlays with the correlation in mind, often paying less than the simple multiplication would suggest. Do not use the 12.5 percent shortcut for a ticket built from one game.</p>
+
+<h2>What to take from this</h2>
+<p>A three-leg parlay is a reasonable entertainment purchase and a poor default strategy. If you play them, you want each leg to be better than the price says, and you want to know the combined chance before you compare it with the payout. Our page on <a href="parlay-builder-player-prop-hit-rates.html">player prop hit rates</a> shows one way to estimate those leg probabilities.</p>
+
+<div class="callout">
+<p><strong>Play responsibly.</strong> The figures on this page are illustrations and not predictions. Only wager money you can afford to lose. If gambling is a problem for you or someone you know, call 1-800-GAMBLER.</p>
+</div>
+</main>
+<footer class="site-footer">
+<div class="inner">
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="parlay-builder-player-prop-hit-rates.html">Prop Hit Rates</a></li>
+<li><a href="odds-of-hitting-a-3-leg-nfl-parlay.html">3-Leg Parlay Odds</a></li>
+<li><a href="nfl-parlay-calculator-true-probability.html">True Probability</a></li>
+</ul>
+<p>This is a fictional website created for educational purposes as part of MKTG:4400 at the University of Iowa. It is not a real business.</p>
+<p>Clearline Parlay Lab. All people, products, and figures described on this site are invented for a class project.</p>
+</div>
+</footer>
+</body>
+</html>
