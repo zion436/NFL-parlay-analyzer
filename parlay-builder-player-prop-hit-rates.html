@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NFL Parlay Builder: How to Use Player Prop Hit Rates | Clearline Parlay Lab</title>
+<meta name="description" content="Learn how to read NFL player prop hit rates when building a parlay, why small samples mislead, and how to compare a hit rate to the price.">
+<style>
+:root{--ink:#1b2430;--muted:#556070;--bg:#f6f4ee;--card:#ffffff;--accent:#0b5d3b;--gold:#e0a82e;--line:#dcd8cb}
+*{box-sizing:border-box}
+body{margin:0;font-family:Georgia,"Times New Roman",serif;line-height:1.65;color:var(--ink);background:var(--bg);font-size:18px}
+.notice{background:#1b2430;color:#fff;font:14px/1.5 Arial,Helvetica,sans-serif;padding:10px 16px;text-align:center}
+.site-header{background:var(--accent);color:#fff;padding:14px 16px}
+.site-header .inner{max-width:900px;margin:0 auto}
+.brand{font:700 22px/1.2 Arial,Helvetica,sans-serif;color:#fff;text-decoration:none;display:inline-block;margin-bottom:8px}
+.brand span{color:var(--gold)}
+nav ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px 8px}
+nav a{display:block;font:15px/1.3 Arial,Helvetica,sans-serif;color:#fff;text-decoration:none;padding:8px 12px;border-radius:6px;background:rgba(255,255,255,.12)}
+nav a:hover,nav a[aria-current="page"]{background:#fff;color:var(--accent)}
+main{max-width:760px;margin:0 auto;padding:28px 16px 44px}
+h1,h2,h3{font-family:Arial,Helvetica,sans-serif;line-height:1.25;color:var(--accent)}
+h1{font-size:2rem;margin:.2em 0 .5em}
+h2{font-size:1.4rem;margin:1.8em 0 .5em}
+h3{font-size:1.1rem;margin:1.4em 0 .4em}
+p{margin:0 0 1em}
+a{color:#0a4f9e}
+.lead{font-size:1.15rem;color:var(--muted)}
+.callout{background:var(--card);border-left:5px solid var(--gold);padding:14px 16px;margin:1.4em 0;border-radius:0 8px 8px 0}
+.tablewrap{overflow-x:auto;margin:1em 0}
+table{width:100%;border-collapse:collapse;background:var(--card);font:15px/1.4 Arial,Helvetica,sans-serif}
+th,td{border:1px solid var(--line);padding:9px 10px;text-align:left}
+th{background:#ece8da}
+.site-footer{background:#1b2430;color:#d9dee5;padding:24px 16px;font:14px/1.6 Arial,Helvetica,sans-serif}
+.site-footer .inner{max-width:760px;margin:0 auto}
+.site-footer a{color:#fff}
+.site-footer ul{list-style:none;padding:0;margin:0 0 14px;display:flex;flex-wrap:wrap;gap:6px 16px}
+@media (min-width:640px){h1{font-size:2.4rem}}
+</style>
+</head>
+<body>
+<div class="notice">This is a fictional website created for educational purposes as part of MKTG:4400 at the University of Iowa. It is not a real business.</div>
+<header class="site-header">
+<div class="inner">
+<a class="brand" href="index.html">Clearline <span>Parlay Lab</span></a>
+<nav aria-label="Main">
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="parlay-builder-player-prop-hit-rates.html" aria-current="page">Prop Hit Rates</a></li>
+<li><a href="odds-of-hitting-a-3-leg-nfl-parlay.html">3-Leg Parlay Odds</a></li>
+<li><a href="nfl-parlay-calculator-true-probability.html">True Probability</a></li>
+</ul>
+</nav>
+</div>
+</header>
+<main>
+<h1>Building an NFL parlay with player prop hit rates</h1>
+<p class="lead">A hit rate tells you how often a player cleared a number in the past. It is a useful starting point for a parlay, and a misleading one if you stop there.</p>
+
+<p>Player props are the most popular legs in modern NFL parlays. A receiver's yardage, a quarterback's passing touchdowns, a running back's rushing attempts: each one is a simple over or under on a single number. Because the question is so clean, it is tempting to answer it with a single statistic. That statistic is usually the hit rate.</p>
+
+<h2>What a hit rate is</h2>
+<p>A hit rate is the share of games in which a player went over (or under) a given line. If a receiver has cleared 62.5 receiving yards in 7 of his last 10 games, his hit rate on that line is 70 percent. The math could not be simpler, which is both its appeal and its trap.</p>
+<p>To keep the example concrete, take a made-up receiver named Marcus Delaney, who plays for a fictional team and has 62.5 yards as his current line. We will use him for the rest of this page.</p>
+
+<h2>Why 7 of 10 is weaker than it sounds</h2>
+<p>Ten games is a small sample. If Delaney's true chance of clearing 62.5 yards were exactly 70 percent, you would still expect his observed rate over ten games to wander by roughly 14 percentage points in either direction, just from luck. In other words, a 7 of 10 record fits a player whose real rate is 56 percent about as comfortably as it fits one whose real rate is 84 percent.</p>
+<p>The fix is not to ignore the number. It is to hold it loosely. A hit rate over 10 games is a hint. Over 30 or 40 games with a stable role, it starts to be evidence.</p>
+
+<h3>Questions to ask before trusting a hit rate</h3>
+<div class="tablewrap">
+<table>
+<thead><tr><th>Question</th><th>Why it matters</th></tr></thead>
+<tbody>
+<tr><td>Has his role changed?</td><td>A new offensive coordinator or a teammate's injury can make last month's games irrelevant.</td></tr>
+<tr><td>Was the line the same?</td><td>Clearing 45.5 yards three weeks ago says little about clearing 62.5 now.</td></tr>
+<tr><td>Who is the opponent?</td><td>A cornerback who shadows top receivers changes the outlook, as does a defense that gives up short passes.</td></tr>
+<tr><td>What is the expected game script?</td><td>A team that trails passes more. A team protecting a lead runs more.</td></tr>
+<tr><td>Is the weather a factor?</td><td>Wind and cold in open stadiums cut passing volume and deep targets.</td></tr>
+</tbody>
+</table>
+</div>
+
+<h2>Compare the hit rate to the price</h2>
+<p>This is the step most parlay builders skip. A 70 percent hit rate sounds great, but the sportsbook has already priced the prop. Suppose the over on Delaney's 62.5 yards is listed at -130. That price implies a probability of 130 divided by 230, which is 56.5 percent. The book is saying the over is a bit better than a coin flip.</p>
+<p>If you believe the real chance is 65 percent, you have found an edge of about 8.5 points. If you believe it is 56 percent, there is no edge, and the hit rate that attracted you was already baked into the number. The question is never whether a player usually hits. It is whether he hits more often than the price requires.</p>
+
+<div class="callout">
+<p><strong>A rough way to shrink a small sample.</strong> Blend the player's recent hit rate with the rate a line like this one would hit across the league, which is close to 50 percent for a fairly set number. For a 10-game record, weighting the two about equally is reasonable. Delaney's 70 percent then becomes roughly 60 percent, which is much closer to what the -130 price already says.</p>
+</div>
+
+<h2>What happens when you stack props</h2>
+<p>Once you have a few legs you like, the hit rates multiply. Three props that each have a true 60 percent chance combine to 0.6 x 0.6 x 0.6, or 21.6 percent. That is better than one in five, but it also means the ticket loses almost four times out of five. We walk through the payouts in our page on <a href="odds-of-hitting-a-3-leg-nfl-parlay.html">3-leg parlay odds</a>.</p>
+<p>Be careful with props from the same game. A quarterback's passing yards and his top receiver's receiving yards rise and fall together, so they are not independent. Multiplying their probabilities understates the chance they both hit and overstates the chance one hits while the other misses. Our page on <a href="nfl-parlay-calculator-true-probability.html">true probability</a> covers how to handle that.</p>
+
+<h2>A simple routine for building a parlay</h2>
+<p>Start with the player's last 15 to 20 games, not the last five. Note the line each time, not just the result. Adjust for role, opponent, and game script. Shrink the raw rate toward 50 percent if the sample is small. Then convert the sportsbook price to a probability and compare. Only legs that pass that last test belong on the slip. Everything else is decoration.</p>
+
+<div class="callout">
+<p><strong>Play responsibly.</strong> Hit rates describe the past and cannot promise the future. Only wager money you can afford to lose. If gambling is a problem for you or someone you know, call 1-800-GAMBLER.</p>
+</div>
+</main>
+<footer class="site-footer">
+<div class="inner">
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="parlay-builder-player-prop-hit-rates.html">Prop Hit Rates</a></li>
+<li><a href="odds-of-hitting-a-3-leg-nfl-parlay.html">3-Leg Parlay Odds</a></li>
+<li><a href="nfl-parlay-calculator-true-probability.html">True Probability</a></li>
+</ul>
+<p>This is a fictional website created for educational purposes as part of MKTG:4400 at the University of Iowa. It is not a real business.</p>
+<p>Clearline Parlay Lab. All people, products, and figures described on this site are invented for a class project.</p>
+</div>
+</footer>
+</body>
+</html>
