@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NFL Parlay Calculator: Finding True Probability | Clearline Parlay Lab</title>
+<meta name="description" content="Step-by-step guide to calculating the true probability of an NFL parlay: convert American odds, remove the vig, combine legs, and compare to the payout.">
+<style>
+:root{--ink:#1b2430;--muted:#556070;--bg:#f6f4ee;--card:#ffffff;--accent:#0b5d3b;--gold:#e0a82e;--line:#dcd8cb}
+*{box-sizing:border-box}
+body{margin:0;font-family:Georgia,"Times New Roman",serif;line-height:1.65;color:var(--ink);background:var(--bg);font-size:18px}
+.notice{background:#1b2430;color:#fff;font:14px/1.5 Arial,Helvetica,sans-serif;padding:10px 16px;text-align:center}
+.site-header{background:var(--accent);color:#fff;padding:14px 16px}
+.site-header .inner{max-width:900px;margin:0 auto}
+.brand{font:700 22px/1.2 Arial,Helvetica,sans-serif;color:#fff;text-decoration:none;display:inline-block;margin-bottom:8px}
+.brand span{color:var(--gold)}
+nav ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px 8px}
+nav a{display:block;font:15px/1.3 Arial,Helvetica,sans-serif;color:#fff;text-decoration:none;padding:8px 12px;border-radius:6px;background:rgba(255,255,255,.12)}
+nav a:hover,nav a[aria-current="page"]{background:#fff;color:var(--accent)}
+main{max-width:760px;margin:0 auto;padding:28px 16px 44px}
+h1,h2,h3{font-family:Arial,Helvetica,sans-serif;line-height:1.25;color:var(--accent)}
+h1{font-size:2rem;margin:.2em 0 .5em}
+h2{font-size:1.4rem;margin:1.8em 0 .5em}
+h3{font-size:1.1rem;margin:1.4em 0 .4em}
+p{margin:0 0 1em}
+a{color:#0a4f9e}
+.lead{font-size:1.15rem;color:var(--muted)}
+.callout{background:var(--card);border-left:5px solid var(--gold);padding:14px 16px;margin:1.4em 0;border-radius:0 8px 8px 0}
+.formula{background:#ece8da;border-radius:8px;padding:12px 14px;font:15px/1.6 "Courier New",Courier,monospace;overflow-x:auto;margin:1em 0}
+.tablewrap{overflow-x:auto;margin:1em 0}
+table{width:100%;border-collapse:collapse;background:var(--card);font:15px/1.4 Arial,Helvetica,sans-serif}
+th,td{border:1px solid var(--line);padding:9px 10px;text-align:left}
+th{background:#ece8da}
+.site-footer{background:#1b2430;color:#d9dee5;padding:24px 16px;font:14px/1.6 Arial,Helvetica,sans-serif}
+.site-footer .inner{max-width:760px;margin:0 auto}
+.site-footer a{color:#fff}
+.site-footer ul{list-style:none;padding:0;margin:0 0 14px;display:flex;flex-wrap:wrap;gap:6px 16px}
+@media (min-width:640px){h1{font-size:2.4rem}}
+</style>
+</head>
+<body>
+<div class="notice">This is a fictional website created for educational purposes as part of MKTG:4400 at the University of Iowa. It is not a real business.</div>
+<header class="site-header">
+<div class="inner">
+<a class="brand" href="index.html">Clearline <span>Parlay Lab</span></a>
+<nav aria-label="Main">
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="parlay-builder-player-prop-hit-rates.html">Prop Hit Rates</a></li>
+<li><a href="odds-of-hitting-a-3-leg-nfl-parlay.html">3-Leg Parlay Odds</a></li>
+<li><a href="nfl-parlay-calculator-true-probability.html" aria-current="page">True Probability</a></li>
+</ul>
+</nav>
+</div>
+</header>
+<main>
+<h1>How to calculate the true probability of an NFL parlay</h1>
+<p class="lead">You can do this with a phone calculator and four steps. Once you have the true probability, the payout on the slip finally has something to be measured against.</p>
+
+<p>A parlay calculator on a sportsbook app tells you what you would win. A true probability calculation tells you how often you should win. The second number is the one that decides whether the first is a good deal. Here is the method we use, with a worked example at the end.</p>
+
+<h2>Step 1: Convert each price to an implied probability</h2>
+<p>American odds come in two flavors. Negative odds, like -150, tell you how much you must risk to win 100. Positive odds, like +130, tell you how much you win on a 100 risk. Each one can be turned into the probability the price implies.</p>
+<div class="formula">
+Negative odds: probability = odds / (odds + 100), using the number without its minus sign<br>
+Positive odds: probability = 100 / (odds + 100)
+</div>
+<p>So -150 becomes 150 / 250, which is 60 percent. And +130 becomes 100 / 230, which is 43.5 percent. A -110 price becomes 110 / 210, or 52.4 percent.</p>
+
+<h2>Step 2: Remove the vig</h2>
+<p>The two sides of a market always add up to more than 100 percent, and the extra is the sportsbook's margin, called the vig or juice. If both sides of a spread are -110, each implies 52.4 percent, and together they total 104.8 percent. The fair probability of each side is 50 percent.</p>
+<p>The simplest way to strip out the vig is to divide each implied probability by the total. This works when you can see both sides of the market.</p>
+<div class="formula">
+Fair probability = side's implied probability / sum of both sides' implied probabilities
+</div>
+<p>As an example, suppose a total is priced at -120 for the over and +100 for the under. The over implies 54.5 percent and the under implies 50 percent, for a total of 104.5 percent. Divide each by 1.045 and you get a fair 52.2 percent for the over and 47.8 percent for the under.</p>
+<p>This method is a good approximation, not a perfect one. Some books shade longshots more than favorites, so treat the result as a working estimate.</p>
+
+<h2>Step 3: Multiply the legs together</h2>
+<p>For legs that do not affect each other, the parlay's true probability is the product of the fair probabilities. Say your three legs have fair probabilities of 52.2 percent, 50 percent, and 58 percent.</p>
+<div class="formula">
+0.522 x 0.50 x 0.58 = 0.151, or 15.1 percent
+</div>
+<p>That is about 1 chance in 6.6.</p>
+
+<h2>Step 4: Compare to the payout</h2>
+<p>Now convert the quoted parlay payout to a break-even probability using the same formulas from Step 1. If the slip pays +550, the break-even is 100 / 650, which is 15.4 percent. Your estimated true probability of 15.1 percent is a hair below that. The ticket is close to a fair price but still slightly negative.</p>
+<p>If the same legs paid +650, the break-even would drop to 13.3 percent, and the ticket would have a small positive expected value. The legs did not change. Only the price did, and that is why the price deserves as much attention as the picks.</p>
+
+<h3>A quick reference</h3>
+<div class="tablewrap">
+<table>
+<thead><tr><th>American odds</th><th>Implied probability</th></tr></thead>
+<tbody>
+<tr><td>-200</td><td>66.7%</td></tr>
+<tr><td>-150</td><td>60.0%</td></tr>
+<tr><td>-110</td><td>52.4%</td></tr>
+<tr><td>+100</td><td>50.0%</td></tr>
+<tr><td>+150</td><td>40.0%</td></tr>
+<tr><td>+300</td><td>25.0%</td></tr>
+<tr><td>+596</td><td>14.4%</td></tr>
+</tbody>
+</table>
+</div>
+
+<h2>When legs are not independent</h2>
+<p>Steps 1 through 4 assume the legs have nothing to do with each other, which is fine for bets on different games. It breaks down for same-game parlays. If a team's moneyline and that same team's quarterback passing yards over are both on the slip, they tend to hit together, so the real chance of both is higher than the product. Sportsbooks know this and reduce the payout to match.</p>
+<p>You cannot fix this with simple multiplication. A practical approach is to treat same-game legs as one combined question: how often does this team win when its quarterback throws for that many yards? If you cannot answer that, you can still use the multiplied number as a floor, and be wary of any same-game ticket that pays like a true product.</p>
+
+<h2>Where the numbers come from</h2>
+<p>Your fair probabilities are only as good as your inputs. Market prices after the vig is removed are a strong starting point, because they reflect a lot of money and information. If you have reason to think a number is off, such as a late injury or a hit rate that holds up over a large sample, adjust it and say why. Our page on <a href="parlay-builder-player-prop-hit-rates.html">player prop hit rates</a> explains how to do that for props, and our page on <a href="odds-of-hitting-a-3-leg-nfl-parlay.html">3-leg parlay odds</a> shows how the results play out across many tickets.</p>
+
+<div class="callout">
+<p><strong>Play responsibly.</strong> A calculation is an estimate, and a good estimate still loses plenty of the time. Only wager money you can afford to lose. If gambling is a problem for you or someone you know, call 1-800-GAMBLER.</p>
+</div>
+</main>
+<footer class="site-footer">
+<div class="inner">
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="parlay-builder-player-prop-hit-rates.html">Prop Hit Rates</a></li>
+<li><a href="odds-of-hitting-a-3-leg-nfl-parlay.html">3-Leg Parlay Odds</a></li>
+<li><a href="nfl-parlay-calculator-true-probability.html">True Probability</a></li>
+</ul>
+<p>This is a fictional website created for educational purposes as part of MKTG:4400 at the University of Iowa. It is not a real business.</p>
+<p>Clearline Parlay Lab. All people, products, and figures described on this site are invented for a class project.</p>
+</div>
+</footer>
+</body>
+</html>
