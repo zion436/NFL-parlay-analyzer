@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://zion436.github.io/NFL-parlay-analyzer/sitemap.xml
